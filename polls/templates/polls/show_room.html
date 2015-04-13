@@ -1,0 +1,23 @@
+$def with (room)
+
+<br>
+<br>
+<br>
+<div style="width:600px; height:auto; border-radius: 25px; margin: 0 auto; color: #522900; background-color: #b2d8d8; opacity: 0.97; padding: 20px;">
+<h1 align="center"> $room.name </h1>
+
+<pre>
+$room.description
+</pre>
+
+$if room.name == "Death":
+	<p><a href="/">Play Again?</a></p>
+$elif room.name == "The End":
+	<p><a href="/">Play Again?</a></p>
+$else:
+	<p>
+	<form align="center" action="/game" method="POST" autocomplete="off">
+		<input type="text" name="action"> <input type="SUBMIT">
+		</form>
+		</p>
+</div>

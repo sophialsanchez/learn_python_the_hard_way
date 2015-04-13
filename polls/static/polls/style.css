@@ -1,0 +1,47 @@
+a.foot {
+    color: #CC3300;
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+}
+
+a.foot:hover {
+	color: #FFCC00;
+}
+
+a.box {
+	color: #522900;
+}
+
+.footer
+{
+position: absolute;
+bottom: 0px;
+width: 100%;
+text-align: center;
+padding: 10px;
+}
+
+html {
+	background: url(images/background.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o- background-size: cover;
+	background-size: cover;
+}
+
+.main-box {
+	width: 600px;
+	height:auto;
+	border-radius: 25px;
+	margin: 0 auto;
+	color: #522900;
+	background-color: #b2d8d8;
+	opacity: 0.97;
+	padding: 20px;
+}
+
+body {
+	font-size: 17px;
+	color: #522900;
+}

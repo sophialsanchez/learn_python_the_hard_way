@@ -1,0 +1,43 @@
+{% load staticfiles %}
+
+<html>
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+<link rel="icon" 
+      type="image/jpg" 
+      href="http://upload.wikimedia.org/wikipedia/commons/a/a4/Ggb_by_night.jpg">
+<br>
+
+<br>
+<br>
+<head>
+	<title>San Francisco: A Text-Based Adventure</title>
+</head>
+
+<div class="main-box">
+
+<h1 align="center">{{ room.name }}</h1>            
+<body>
+
+<p>{{ room.description }}</p>
+{% if room.name != "The End" and room.name != "You lose :(" %}
+	<form id="response" align="center" autocomplete="off" action = "{% url 'polls:get_response' room.slug %}" method="post">
+		{{form}}
+		{% csrf_token %}
+		<input type="submit" value="Submit">
+	</form>
+	<p align="center">{{error}}</p>
+{% else %}
+	<form align="center" action="/polls/">
+	<input type="submit" value="Play again?">
+	</form>
+{% endif %}
+</body>
+</div>
+
+<div class="footer">
+<a class="foot" href="/about">About</a>
+</div>
+		
+
+</html>
